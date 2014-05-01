@@ -131,3 +131,51 @@ function primos()
 }
 
 </script>
+
+
+<!DOCTYPE html>
+<html>
+	<center> <h3>Validacion y Suma de Números Binarios</h3>
+	<p>Este programa validara y sumara los datos en binarios que se ingresen</p>
+	
+		Valor 1: <input id="valor1" type="text" ="Ingrese valor 1" /><br>
+		Valor 2: <input id="valor2" type="text" label="Ingrese valor 2" /><br></br>
+		<input type="button" value="Validar y Sumar" onClick="Sumar(valor1.value , valor2.value)">
+	</center>
+</html>
+
+
+<script type="text/javascript"> 
+var r, re;
+
+function Sumar(a,b){
+validar(a);
+validar(b);
+
+r = ( parseInt(a) + parseInt(b) );
+re = r.toString(2);
+alert("Ambos valores son binarios, la suma de los valores es: " + re);
+
+}
+
+
+function validar(x)
+{
+	var	Ban = 0;
+	var v, w;
+
+	for (var i = 0; i <= x.length; i++) {
+		v = x.charAt(i);
+		if((v == 0) || (v == 1)) 
+		{
+			Ban = 1;
+		}
+		else
+		{
+			alert("Porfavor solo ingrese numeros binarios");
+			location.href="Sumar y Validar Binario.html";
+		}
+	}
+}
+
+</script>
